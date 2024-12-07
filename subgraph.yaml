@@ -1,0 +1,35 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: EAS
+    network: base
+    source:
+      address: "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+      abi: EAS
+      startBlock: 2369016
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Attested
+        - Revoked
+        - RevokedOffchain
+        - Timestamped
+      abis:
+        - name: EAS
+          file: ./abis/EAS.json
+      eventHandlers:
+        - event: Attested(indexed address,indexed address,bytes32,indexed bytes32)
+          handler: handleAttested
+        - event: Revoked(indexed address,indexed address,bytes32,indexed bytes32)
+          handler: handleRevoked
+        - event: RevokedOffchain(indexed address,indexed bytes32,indexed uint64)
+          handler: handleRevokedOffchain
+        - event: Timestamped(indexed bytes32,indexed uint64)
+          handler: handleTimestamped
+      file: ./src/eas.ts
