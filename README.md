@@ -6,8 +6,8 @@ This repository contains [Subgraph](https://thegraph.com/) definitions for [Ethe
 
 ## Deployment
 
-- https://thegraph.com/studio/subgraph/eas-schemas/
-- https://api.studio.thegraph.com/query/97520/eas-schemas/v0.0.1/
+- https://thegraph.com/studio/subgraph/eas-attestations
+- https://testnet.thegraph.com/explorer/subgraphs/5k2zvzNLe2hC9MqYGtZNqwNP3H7M1YCHC3JNeEo3ajXM?view=Query&chain=arbitrum-sepolia
 
 > Refer to [Subgraph Cheatsheet](https://drive.google.com/file/d/12IyFd7bbPrcRcHK-4EMCGGmATZtiY_yW/view).
 
